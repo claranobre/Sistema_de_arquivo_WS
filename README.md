@@ -21,3 +21,10 @@ O protocolo SOAP tem diversas vantagens sobre outras maneiras de chamar funçõe
 sudo pip install pyftpdlib
 
 
+# Como executar 
+
+** Servidor
+python Servidor.py
+
+** Cliente 
+python Cliente.py

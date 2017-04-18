@@ -28,10 +28,12 @@ def connect(login = '', password = '', ip='127.0.0.1', porta=2121):
         logging.critical('Não foi possivel conectar ao servidor FTP')
 
     return handler
+
+# Função para listar os diretórios existentes    
 def listDirectories(ftp):
-    log = []
-    ftp.retrlines('LIST', callback=log.append)
-    files = (line.rsplit(None, 1)[1] for line in log)
+    #log = []
+    #ftp.retrlines('LIST', callback=log.append)
+    #files = (line.rsplit(None, 1)[1] for line in log)
     print 'Arquivos: \n'
     for f in list(files):
         print f
