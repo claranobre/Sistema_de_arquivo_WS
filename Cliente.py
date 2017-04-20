@@ -37,7 +37,7 @@ def listDirectories(ftp):
     for f in list(files):
         print f
 
-# a função sobe um arquivo no servidor com o nome especificado por 'name'
+# A função sobe um arquivo no servidor com o nome especificado por 'name'
 # localizada no diretório espeficidado por 'path'
 def upload(handler, name, path):
 
