@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema de Arquivos com Web Service
 
 Projeto de implementação Web Service da disciplina de Programação Distribuída 2017.1
@@ -80,3 +81,8 @@ python Servidor.py
 ```
 python Cliente.py
 ```
+=======
+# My Awesome Book
+
+This file file serves as your book's preface, a great place to describe your book's content and ideas.
+>>>>>>> refs/remotes/origin/master
