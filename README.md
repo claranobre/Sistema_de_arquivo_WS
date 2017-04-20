@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sistema de Arquivos com Web Service
 
 Projeto de implementação Web Service da disciplina de Programação Distribuída 2017.1
@@ -8,6 +7,9 @@ Dar continuidade ao projeto de RMI de desenvolvimento de um sistema de arquivos 
 
 # Linguagem utilizada
 Foi utilizado a linguagem de programação Python, por curiosidade em utilizar a biblioteca [suds](http://ricardoduarte.net/posts/como-acessar-webservices-soap-com-python.html)
+
+# Sistema Operacional utilizado
+O projeto foi todo desenvolvido para ser executado em Sistemas Operacionais GNU/Linux, não foi testado em outros SO's.
 
 # Protocolo SOAP
 
@@ -22,6 +24,13 @@ O protocolo SOAP tem diversas vantagens sobre outras maneiras de chamar funçõe
 - É independente do sistema operacional e CPU.
 - Pode ser usado tanto de forma anônima como com autenticação (nome/senha). 
 
+# Instalando pip
+
+```
+sudo apt-get install python-pip python-dev build-essential
+sudo pip install --upgrade pip 
+sudo pip install --upgrade virtualenv
+```
 
 # Instalando o FTP
 
@@ -30,6 +39,8 @@ sudo pip install pyftpdlib
 # Instalando a biblioteca do protocolo SOAP para trabalharmos com o Webservice
 
 [Download Suds](https://pypi.python.org/pypi/suds)
+
+Após o download, será necessário descompactar o arquivo e no diretório deve-se dar os seguintes comandos:
 
 ```
 python setup.py build
@@ -69,7 +80,6 @@ def delFile(handler, name):
 
 ```
 
-
 # Execução do Projeto
 
 - Servidor
@@ -81,8 +91,3 @@ python Servidor.py
 ```
 python Cliente.py
 ```
-=======
-# My Awesome Book
-
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
->>>>>>> refs/remotes/origin/master
