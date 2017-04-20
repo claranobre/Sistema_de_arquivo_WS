@@ -1,28 +1,29 @@
 #!/usr/bin/env python
+# -*- coding: utf-8
 
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
-from pyftpdlib.servers import FTPServer
-#from pyftpdlib.servers import SOAPServer
-
+#from pyftpdlib.servers import FTPServer
+#from SOAPpy import SOAPServer
+from suds.servers import Servidor
 import sys
 
 def config():
-    # Objeto responsável pela autenticação dos usuarios e permissões
+    #Objeto responsável pela autenticação dos usuarios e permissões
     authorizer = DummyAuthorizer()
 
-    # Local de acesso padrão
-    path = "/home/clara/Documents/UFRN/Programação\ Distribuida/Sistema_de_arquivo_WS/"
+    #Local de acesso padrão
+    path = "/home/clara/Documents/"
     print "Local de acesso ao servidor FTP: \n"
     
-    # Usuario padrão com permissão total de escrita/leitura
+    #Usuario padrão com permissão total de escrita/leitura
     authorizer.add_user('clara', '42', path, perm='elradfmwM')
 
-    # Usuario anônimo
+    #Usuario anônimo
     authorizer.add_anonymous(path, perm="el")
 
-    # Instantiate FTP handler class
-    # Objeto que manipula os comandos enviados pelo cliente FTP
+    #Instantiate FTP handler class
+    #Objeto que manipula os comandos enviados pelo cliente FTP
     handler = FTPHandler
     handler.authorizer = authorizer
 
@@ -43,21 +44,12 @@ def config():
       '''
 
     return handler
-    # Define a customized banner (string returned when client connects)
-    handler.banner = "pyftpdlib based ftpd ready."
-
-    # Specify a masquerade address and the range of ports to use for
-    # passive connections.  Decomment in case you're behind a NAT.
-    # handler.masquerade_address = '151.25.42.11'
-    # handler.passive_ports = range(60000, 65535)
-
-    # Instantiate FTP server class and listen on 0.0.0.0:2121 =
 
 def main(arg):
     
     handler = config()
     address = ('', 2121)
-    server = FTPServer(address, handler)
+    server = SOAPServer(address, handler)
 
     # set a limit for connections
     server.max_cons = 256

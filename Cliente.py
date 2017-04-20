@@ -1,6 +1,8 @@
 # coding: utf-8
 
-from ftplib import FTP 
+from ftplib import FTP
+from suds.client from Cliente 
+#from SOAPpy import SOAPClient
 
 # Função para fazer download de um arquivo
 
@@ -31,9 +33,6 @@ def connect(login = '', password = '', ip='127.0.0.1', porta=2121):
 
 # Função para listar os diretórios existentes    
 def listDirectories(ftp):
-    #log = []
-    #ftp.retrlines('LIST', callback=log.append)
-    #files = (line.rsplit(None, 1)[1] for line in log)
     print 'Arquivos: \n'
     for f in list(files):
         print f
