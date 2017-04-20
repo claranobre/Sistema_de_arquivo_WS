@@ -28,7 +28,11 @@ sudo pip install pyftpdlib
 # Como executar 
 
 ** Servidor
+```
 python Servidor.py
+```
 
 ** Cliente 
+```
 python Cliente.py
+```
