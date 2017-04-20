@@ -59,6 +59,15 @@ def main(arg):
 - Cliente
 O cliente possui todos os comandos das ações que um usuário pode ter dentro do servidor, começando com o seu acesso (autenticação), e após estar conectado ao servidor ele poderá fazer download de um arquivo, acessar diretórios, salvar/remover arquivo em diretório específico, listar diretórios.
 
+```
+def listDirectories(ftp)
+def upload(handler, name, path)
+def moveToDir(handler, Dir)
+def makeDir(handler, name)
+def delFile(handler, name):
+
+```
+
 
 # Execução do Projeto
 
